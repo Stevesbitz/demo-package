@@ -16,13 +16,7 @@
     <properties>
         <java.version>17</java.version>
     </properties>
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/iteesoft/iteesoft-util-package</url>
-        </repository>
-    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -69,5 +63,24 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>github</id>
+            <activation>
+                <property>
+                    <name>useGitHubPackages</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <distributionManagement>
+                <repository>
+                    <id>github</id>
+                    <name>GitHub Packages</name>
+                    <url>https://maven.pkg.github.com/iteesoft/iteesoft-util-package</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
 
 </project>
