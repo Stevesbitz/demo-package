@@ -46,7 +46,13 @@
         </dependency>
 
     </dependencies>
-
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/stevesbitz/demo-package</url>
+        </repository>
+    </distributionManagement>
     <build>
         <plugins>
             <plugin>
@@ -73,13 +79,6 @@
                     <value>true</value>
                 </property>
             </activation>
-            <distributionManagement>
-                <repository>
-                    <id>github</id>
-                    <name>GitHub Packages</name>
-                    <url>https://maven.pkg.github.com/iteesoft/iteesoft-util-package</url>
-                </repository>
-            </distributionManagement>
         </profile>
     </profiles>
 

@@ -13,6 +13,6 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
       - name: Publish package
-        run: mvn -e --batch-mode -DuseGitHubPackages=true deploy
+        run: mvn --batch-mode deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.ITEESOFT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
